@@ -1,0 +1,116 @@
+{
+  "curriculum_folder": "01_learn_the_basics",
+  "description": "Topic index with source-derived notes and representative runnable examples.",
+  "topic_count": 11,
+  "topics": [
+    {
+      "topic": "Syntax And Comments",
+      "source_file": "01_syntax_and_comments.py",
+      "key_notes": [
+        "Check indentation and branching",
+        "Calculate cylinder volume using math.pi"
+      ],
+      "example_code": "\n    check_indentation(10)\n    print(\"Volume:\", calculate_cylinder_volume(3.0, 5.0))\n"
+    },
+    {
+      "topic": "Variables And Datatypes",
+      "source_file": "02_variables_and_datatypes.py",
+      "key_notes": [
+        "Primitive data types definitions",
+        "Display variable types and values"
+      ],
+      "example_code": "\n    # Display variable types and values\n    for val in [an_integer, huge_integer, a_float, a_complex, a_string, a_boolean, a_none]:\n        print(f\"Value: {str(val):30} | Type: {type(val).__name__}\")\n"
+    },
+    {
+      "topic": "Operators",
+      "source_file": "03_operators.py",
+      "key_notes": [
+        "Arithmetic operators",
+        "Comparison and logical operators",
+        "Identity and membership operators",
+        "Walrus operator assignment expression"
+      ],
+      "example_code": "\n    a, b = 17, 5\n\n    # Arithmetic operators\n    print(\"Addition:       \", a + b)\n    print(\"Division:       \", a / b)\n    print(\"Floor Division: \", a // b)\n    print(\"Modulo:         \", a % b)\n    print(\"Exponentiation: \", a ** b)\n\n    # Comparison and logical operators\n    print(\"Equality:       \", a == b)\n    print(\"Logical AND:    \", (a > 10) and (b < 10))\n\n    # Identity and membership operators\n    x, y = [1, 2], [1, 2]\n    print(\"Equality (==):  \", x == y)\n    print(\"Identity (is):  \", x is y)"
+    },
+    {
+      "topic": "Working With Strings",
+      "source_file": "04_working_with_strings.py",
+      "key_notes": [
+        "String stripping and case conversion",
+        "String slicing start stop step",
+        "String split and join methods",
+        "Formatted string literal"
+      ],
+      "example_code": "\n    text = \"  Python Programming Language  \"\n\n    # String stripping and case conversion\n    cleaned = text.strip()\n    print(\"Uppercase: \", cleaned.upper())\n\n    # String slicing start stop step\n    print(\"Slice:     \", cleaned[0:6])\n    print(\"Reversed:  \", cleaned[::-1])\n\n    # String split and join methods\n    words = cleaned.split()\n    print(\"Joined:    \", \" - \".join(words))\n\n    # Formatted string literal\n    price, qty = 19.99, 3\n    print(f\"Total: ${price * qty:.2f}\")"
+    },
+    {
+      "topic": "Conditionals",
+      "source_file": "05_conditionals.py",
+      "key_notes": [
+        "Conditional branching with if elif else",
+        "Structural pattern matching with match-case"
+      ],
+      "example_code": "\n    print(classify_age(25))\n    print(route_request({\"method\": \"GET\", \"path\": \"/health\"}))\n    print(route_request({\"method\": \"POST\", \"body\": {\"user\": \"alex\"}}))\n"
+    },
+    {
+      "topic": "Loops",
+      "source_file": "06_loops.py",
+      "key_notes": [
+        "Primality test using for-else loop construct",
+        "For loop with enumerate",
+        "While loop with break and continue"
+      ],
+      "example_code": "\n    # For loop with enumerate\n    for idx, name in enumerate([\"Django\", \"FastAPI\", \"Flask\"], start=1):\n        print(f\"{idx}. {name}\")\n\n    # While loop with break and continue\n    count = 0\n    while count < 6:\n        count += 1\n        if count == 3:\n            continue\n        print(\"Count:\", count)\n\n    print(\"Is 29 prime?:\", is_prime(29))\n"
+    },
+    {
+      "topic": "Type Casting",
+      "source_file": "07_type_casting.py",
+      "key_notes": [
+        "Implicit type conversion",
+        "Explicit type conversion",
+        "Collections type conversion",
+        "Boolean truthiness evaluation"
+      ],
+      "example_code": "\n    # Implicit type conversion\n    int_val, float_val = 10, 2.5\n    print(\"Implicit cast: \", int_val + float_val)\n\n    # Explicit type conversion\n    str_val = \"100\"\n    print(\"Explicit int:  \", int(str_val))\n    print(\"Explicit float:\", float(str_val))\n\n    # Collections type conversion\n    raw_list = [1, 2, 2, 3]\n    print(\"Converted set: \", set(raw_list))\n\n    # Boolean truthiness evaluation\n    print(\"Empty list bool:\", bool([]))\n    print(\"Non-empty str:  \", bool(\"Hello\"))\n"
+    },
+    {
+      "topic": "Functions And Builtins",
+      "source_file": "08_functions_and_builtins.py",
+      "key_notes": [
+        "Function accepting positional, default, *args, and **kwargs",
+        "Return multiple values as a tuple",
+        "Built-in functions demo"
+      ],
+      "example_code": "\n    cfg = build_config(\"localhost\", 443, \"ssl\", \"primary\", env=\"prod\")\n    print(\"Config:\", cfg)\n\n    low, high = get_min_max([4.5, 1.2, 9.8, 3.1])\n    print(f\"Min: {low}, Max: {high}\")\n\n    # Built-in functions demo\n    nums = [1, 2, 3, 4]\n    print(\"Sum:\", sum(nums))\n    print(\"All positive?:\", all(x > 0 for x in nums))\n"
+    },
+    {
+      "topic": "Builtin Data Structures",
+      "source_file": "09_builtin_data_structures.py",
+      "key_notes": [
+        "List operations",
+        "Tuple packing and unpacking",
+        "Set mathematical operations",
+        "Dictionary key-value operations"
+      ],
+      "example_code": "\n    # List operations\n    items = [\"a\", \"b\", \"c\"]\n    items.append(\"d\")\n    items.pop(0)\n    print(\"List: \", items)\n\n    # Tuple packing and unpacking\n    point = (10, 20)\n    x, y = point\n    print(f\"Tuple: x={x}, y={y}\")\n\n    # Set mathematical operations\n    set1, set2 = {1, 2, 3}, {3, 4, 5}\n    print(\"Union:        \", set1 | set2)\n    print(\"Intersection: \", set1 & set2)\n\n    # Dictionary key-value operations"
+    },
+    {
+      "topic": "Exceptions And Error Handling",
+      "source_file": "10_exceptions_and_error_handling.py",
+      "key_notes": [
+        "Custom exception class",
+        "Safe divide with try-except-else-finally"
+      ],
+      "example_code": "\n    print(\"Result 10/2:\", safe_divide(10, 2))\n    print(\"Result 10/0:\", safe_divide(10, 0))\n    print(\"Result -5/2:\", safe_divide(-5, 2))\n"
+    },
+    {
+      "topic": "Type Annotations",
+      "source_file": "11_type_annotations.py",
+      "key_notes": [
+        "Type annotated variables",
+        "Type annotated function with union syntax"
+      ],
+      "example_code": "\n    print(format_user(username, port))\n    print(format_user(\"guest\"))\n"
+    }
+  ]
+}

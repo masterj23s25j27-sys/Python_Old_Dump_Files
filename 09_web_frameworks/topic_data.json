@@ -1,0 +1,31 @@
+{
+  "curriculum_folder": "09_web_frameworks",
+  "description": "Topic index with source-derived notes and representative runnable examples.",
+  "topic_count": 3,
+  "topics": [
+    {
+      "topic": "Frameworks Comparison",
+      "source_file": "01_frameworks_comparison.py",
+      "key_notes": [
+        "Review the frameworks comparison example and identify its inputs, outputs, and edge cases."
+      ],
+      "example_code": "\n    for name, desc in FRAMEWORKS.items():\n        print(f\"{name:8}: {desc}\")\n"
+    },
+    {
+      "topic": "Fastapi Rest Api",
+      "source_file": "02_fastapi_rest_api.py",
+      "key_notes": [
+        "Review the fastapi rest api example and identify its inputs, outputs, and edge cases."
+      ],
+      "example_code": "\n    print(FASTAPI_SAMPLE.strip())\n"
+    },
+    {
+      "topic": "Flask Microservice",
+      "source_file": "03_flask_microservice.py",
+      "key_notes": [
+        "Review the flask microservice example and identify its inputs, outputs, and edge cases."
+      ],
+      "example_code": "\n    print(FLASK_SAMPLE.strip())\n"
+    }
+  ]
+}

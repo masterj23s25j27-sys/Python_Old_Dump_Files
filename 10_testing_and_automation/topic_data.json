@@ -1,0 +1,40 @@
+{
+  "curriculum_folder": "10_testing_and_automation",
+  "description": "Topic index with source-derived notes and representative runnable examples.",
+  "topic_count": 4,
+  "topics": [
+    {
+      "topic": "Doctest Testing",
+      "source_file": "01_doctest_testing.py",
+      "key_notes": [
+        "Function with interactive doctest assertions"
+      ],
+      "example_code": "\n    results = doctest.testmod(verbose=True)\n    print(f\"Failed: {results.failed}, Attempted: {results.attempted}\")\n"
+    },
+    {
+      "topic": "Unittest Pyunit",
+      "source_file": "02_unittest_pyunit.py",
+      "key_notes": [
+        "Function under test",
+        "TestCase unit test class"
+      ],
+      "example_code": "\n    unittest.main(verbosity=2)\n"
+    },
+    {
+      "topic": "Pytest Testing",
+      "source_file": "03_pytest_testing.py",
+      "key_notes": [
+        "Review the pytest testing example and identify its inputs, outputs, and edge cases."
+      ],
+      "example_code": "\n    print(PYTEST_CODE.strip())\n"
+    },
+    {
+      "topic": "Tox Automation",
+      "source_file": "04_tox_automation.py",
+      "key_notes": [
+        "Review the tox automation example and identify its inputs, outputs, and edge cases."
+      ],
+      "example_code": "\n    print(TOX_INI.strip())\n"
+    }
+  ]
+}

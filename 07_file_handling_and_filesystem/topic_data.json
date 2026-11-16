@@ -1,0 +1,42 @@
+{
+  "curriculum_folder": "07_file_handling_and_filesystem",
+  "description": "Topic index with source-derived notes and representative runnable examples.",
+  "topic_count": 4,
+  "topics": [
+    {
+      "topic": "Text File Io",
+      "source_file": "01_text_file_io.py",
+      "key_notes": [
+        "Write to file",
+        "Read from file",
+        "Clean up file"
+      ],
+      "example_code": "\n    # Write to file\n    with open(TEMP_FILE, \"w\", encoding=\"utf-8\") as f:\n        f.write(\"Line 1\\nLine 2\\n\")\n\n    # Read from file\n    with open(TEMP_FILE, \"r\", encoding=\"utf-8\") as f:\n        content = f.read()\n    print(\"Content:\", content.strip().splitlines())\n\n    # Clean up file\n    if TEMP_FILE.exists():\n        TEMP_FILE.unlink()\n"
+    },
+    {
+      "topic": "Json And Csv Handling",
+      "source_file": "02_json_and_csv_handling.py",
+      "key_notes": [
+        "JSON serialize and deserialize",
+        "CSV parse using DictReader"
+      ],
+      "example_code": "\n    # JSON serialize and deserialize\n    data = {\"name\": \"app\", \"version\": 1}\n    json_str = json.dumps(data)\n    print(\"JSON loads:\", json.loads(json_str))\n\n    # CSV parse using DictReader\n    csv_raw = \"id,name\\n1,alpha\\n2,beta\"\n    reader = csv.DictReader(io.StringIO(csv_raw))\n    for row in reader:\n        print(f\"CSV row: {row['id']} -> {row['name']}\")\n"
+    },
+    {
+      "topic": "Pathlib And Os",
+      "source_file": "03_pathlib_and_os.py",
+      "key_notes": [
+        "Path manipulation using / operator"
+      ],
+      "example_code": "\n    # Path manipulation using / operator\n    p = Path(\".\") / \"subfolder\" / \"file.py\"\n    print(\"Path:  \", p)\n    print(\"Name:  \", p.name)\n    print(\"Suffix:\", p.suffix)\n"
+    },
+    {
+      "topic": "Glob Pattern Matching",
+      "source_file": "04_glob_pattern_matching.py",
+      "key_notes": [
+        "Find matching files with glob"
+      ],
+      "example_code": "\n    # Find matching files with glob\n    root = Path(\".\")\n    matches = list(root.glob(\"*.py\"))\n    print(f\"Top-level Python files: {len(matches)}\")\n"
+    }
+  ]
+}

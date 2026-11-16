@@ -1,0 +1,70 @@
+{
+  "curriculum_folder": "02_data_structures_and_algorithms",
+  "description": "Topic index with source-derived notes and representative runnable examples.",
+  "topic_count": 6,
+  "topics": [
+    {
+      "topic": "Arrays And Linked Lists",
+      "source_file": "01_arrays_and_linked_lists.py",
+      "key_notes": [
+        "Singly linked list node",
+        "Singly linked list implementation",
+        "Prepend element at the head in O(1)",
+        "Append element at the tail in O(n)",
+        "Convert list to string representation"
+      ],
+      "example_code": "\n    ll = LinkedList()\n    ll.append(10)\n    ll.append(20)\n    ll.prepend(5)\n    print(\"Linked list:\", ll.to_string())\n"
+    },
+    {
+      "topic": "Hashmaps",
+      "source_file": "02_hashmaps.py",
+      "key_notes": [
+        "Hash map implementation with chaining",
+        "Compute bucket index using hash function",
+        "Insert or update key-value pair",
+        "Retrieve value by key"
+      ],
+      "example_code": "\n    hm = HashMap()\n    hm.put(\"name\", \"Alice\")\n    hm.put(\"role\", \"Developer\")\n    print(\"Retrieved name:\", hm.get(\"name\"))\n"
+    },
+    {
+      "topic": "Stacks Queues And Heaps",
+      "source_file": "03_stacks_queues_and_heaps.py",
+      "key_notes": [
+        "Stack LIFO using list append and pop",
+        "Queue FIFO using collections.deque popleft",
+        "Priority queue min-heap using heapq"
+      ],
+      "example_code": "\n    # Stack LIFO using list append and pop\n    stack = []\n    stack.append(1)\n    stack.append(2)\n    print(\"Stack pop:\", stack.pop())\n\n    # Queue FIFO using collections.deque popleft\n    queue = deque([\"a\", \"b\", \"c\"])\n    print(\"Queue popleft:\", queue.popleft())\n\n    # Priority queue min-heap using heapq\n    heap = []\n    heapq.heappush(heap, (2, \"Medium\"))\n    heapq.heappush(heap, (1, \"High\"))\n    heapq.heappush(heap, (3, \"Low\"))\n    print(\"Heap pop highest priority:\", heapq.heappop(heap))\n"
+    },
+    {
+      "topic": "Binary Search Tree",
+      "source_file": "04_binary_search_tree.py",
+      "key_notes": [
+        "Binary search tree node",
+        "Binary search tree class",
+        "Insert key into tree",
+        "In-order traversal yielding sorted elements"
+      ],
+      "example_code": "\n    bst = BinarySearchTree()\n    for val in [50, 30, 70, 20, 40]:\n        bst.insert(val)\n    print(\"BST In-order:\", bst.inorder(bst.root))\n"
+    },
+    {
+      "topic": "Recursion",
+      "source_file": "05_recursion.py",
+      "key_notes": [
+        "Recursive factorial calculation",
+        "Recursive Fibonacci with memoization"
+      ],
+      "example_code": "\n    print(\"Factorial 5!:\", factorial(5))\n    print(\"Fibonacci 10:\", fibonacci(10))\n"
+    },
+    {
+      "topic": "Sorting Algorithms",
+      "source_file": "06_sorting_algorithms.py",
+      "key_notes": [
+        "Merge sort divide and conquer",
+        "Helper function to merge two sorted lists",
+        "Quick sort using partitioning"
+      ],
+      "example_code": "\n    data = [64, 34, 25, 12, 22, 11, 90]\n    print(\"Merge sort: \", merge_sort(data))\n    print(\"Quick sort: \", quick_sort(data))\n    print(\"Built-in:   \", sorted(data))\n"
+    }
+  ]
+}

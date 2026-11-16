@@ -1,0 +1,80 @@
+{
+  "curriculum_folder": "04_advanced_python",
+  "description": "Topic index with source-derived notes and representative runnable examples.",
+  "topic_count": 8,
+  "topics": [
+    {
+      "topic": "Lambdas And Functional",
+      "source_file": "01_lambdas_and_functional.py",
+      "key_notes": [
+        "Lambda inline function",
+        "Map function application",
+        "Filter predicate filtering",
+        "Reduce cumulative aggregation"
+      ],
+      "example_code": "\n    nums = [1, 2, 3, 4, 5]\n\n    # Lambda inline function\n    double = lambda x: x * 2\n\n    # Map function application\n    squares = list(map(lambda x: x ** 2, nums))\n\n    # Filter predicate filtering\n    evens = list(filter(lambda x: x % 2 == 0, nums))\n\n    # Reduce cumulative aggregation\n    product = reduce(lambda x, y: x * y, nums)\n\n    print(\"Double 5: \", double(5))\n    print(\"Squares:  \", squares)\n    print(\"Evens:    \", evens)"
+    },
+    {
+      "topic": "Decorators",
+      "source_file": "02_decorators.py",
+      "key_notes": [
+        "Execution timer decorator preserving function signature",
+        "Parameterized decorator to repeat execution"
+      ],
+      "example_code": "\n    print(\"Output:\", process_data(5))\n"
+    },
+    {
+      "topic": "Iterators And Iterables",
+      "source_file": "03_iterators_and_iterables.py",
+      "key_notes": [
+        "Custom countdown iterator implementing __iter__ and __next__"
+      ],
+      "example_code": "\n    for item in Countdown(3):\n        print(\"T-minus:\", item)\n"
+    },
+    {
+      "topic": "Comprehensions",
+      "source_file": "04_comprehensions.py",
+      "key_notes": [
+        "List comprehension",
+        "Set comprehension",
+        "Dictionary comprehension"
+      ],
+      "example_code": "\n    # List comprehension\n    squares = [x ** 2 for x in range(6) if x % 2 == 0]\n    print(\"List comp: \", squares)\n\n    # Set comprehension\n    unique_lengths = {len(w) for w in [\"apple\", \"banana\", \"pear\", \"fig\"]}\n    print(\"Set comp:  \", unique_lengths)\n\n    # Dictionary comprehension\n    index_map = {k: v for v, k in enumerate([\"a\", \"b\", \"c\"])}\n    print(\"Dict comp: \", index_map)\n"
+    },
+    {
+      "topic": "Generator Expressions And Yield",
+      "source_file": "05_generator_expressions_and_yield.py",
+      "key_notes": [
+        "Generator function yielding values on demand",
+        "Generator expression memory efficiency"
+      ],
+      "example_code": "\n    # Generator expression memory efficiency\n    gen = (x * 2 for x in range(100_000))\n    print(\"Generator size in bytes:\", sys.getsizeof(gen))\n    print(\"Stream items:\", list(count_stream(5)))\n"
+    },
+    {
+      "topic": "Variable Scope And Closures",
+      "source_file": "06_variable_scope_and_closures.py",
+      "key_notes": [
+        "Closure maintaining inner state with nonlocal"
+      ],
+      "example_code": "\n    acc = make_accumulator(10)\n    print(\"Add 5: \", acc(5))\n    print(\"Add 20:\", acc(20))\n"
+    },
+    {
+      "topic": "Regular Expressions",
+      "source_file": "07_regular_expressions.py",
+      "key_notes": [
+        "Find all phone numbers matching pattern",
+        "Find first email matching pattern"
+      ],
+      "example_code": "\n    text = \"Call 555-1234 or 555-5678. Contact info@company.com\"\n\n    # Find all phone numbers matching pattern\n    phones = re.findall(r'\\d{3}-\\d{4}', text)\n    print(\"Phones:\", phones)\n\n    # Find first email matching pattern\n    match = re.search(r'[\\w.-]+@[\\w.-]+\\.\\w+', text)\n    if match:\n        print(\"Email: \", match.group())\n"
+    },
+    {
+      "topic": "Context Managers",
+      "source_file": "08_context_managers.py",
+      "key_notes": [
+        "Class-based context manager",
+        "Generator-based context manager"
+      ],
+      "example_code": "\n    with Benchmark():\n        sum(x for x in range(50_000))\n\n    with temp_resource(\"DB_Connection\") as conn:\n        print(\"Using:\", conn)\n"
+    }
+  ]
+}

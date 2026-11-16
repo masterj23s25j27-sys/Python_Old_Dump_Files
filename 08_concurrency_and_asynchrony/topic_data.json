@@ -1,0 +1,40 @@
+{
+  "curriculum_folder": "08_concurrency_and_asynchrony",
+  "description": "Topic index with source-derived notes and representative runnable examples.",
+  "topic_count": 4,
+  "topics": [
+    {
+      "topic": "Gil Explained",
+      "source_file": "01_gil_explained.py",
+      "key_notes": [
+        "GIL concept summary"
+      ],
+      "example_code": "\n    # GIL concept summary\n    print(\"GIL: Global Interpreter Lock allows one thread bytecode execution at a time.\")\n    print(\"Use Threading/AsyncIO for I/O tasks. Use Multiprocessing for CPU tasks.\")\n"
+    },
+    {
+      "topic": "Threading And Threadpool",
+      "source_file": "02_threading_and_threadpool.py",
+      "key_notes": [
+        "Simulated I/O task"
+      ],
+      "example_code": "\n    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:\n        results = list(executor.map(task, [\"A\", \"B\", \"C\"]))\n    print(\"Thread pool results:\", results)\n"
+    },
+    {
+      "topic": "Multiprocessing And Processpool",
+      "source_file": "03_multiprocessing_and_processpool.py",
+      "key_notes": [
+        "CPU-bound computation"
+      ],
+      "example_code": "\n    with concurrent.futures.ProcessPoolExecutor(max_workers=2) as executor:\n        results = list(executor.map(compute_sum, [10_000, 20_000]))\n    print(\"Process pool results:\", results)\n"
+    },
+    {
+      "topic": "Asyncio Coroutines",
+      "source_file": "04_asyncio_coroutines.py",
+      "key_notes": [
+        "Asynchronous coroutine",
+        "Gather concurrent coroutines"
+      ],
+      "example_code": "\n    try:\n        loop = asyncio.get_running_loop()\n    except RuntimeError:\n        loop = None\n\n    if loop and loop.is_running():\n        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:\n            res = pool.submit(asyncio.run, main()).result()\n    else:\n        res = asyncio.run(main())\n\n    print(\"Async results:\", res)\n"
+    }
+  ]
+}

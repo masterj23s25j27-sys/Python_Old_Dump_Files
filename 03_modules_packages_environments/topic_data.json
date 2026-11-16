@@ -1,0 +1,59 @@
+{
+  "curriculum_folder": "03_modules_packages_environments",
+  "description": "Topic index with source-derived notes and representative runnable examples.",
+  "topic_count": 6,
+  "topics": [
+    {
+      "topic": "Builtin Modules",
+      "source_file": "01_builtin_modules.py",
+      "key_notes": [
+        "math square root",
+        "datetime formatted timestamp",
+        "collections Counter frequency",
+        "collections namedtuple",
+        "itertools combinations"
+      ],
+      "example_code": "\n    # math square root\n    print(\"Square root of 81: \", math.sqrt(81))\n\n    # datetime formatted timestamp\n    print(\"Current ISO date:  \", datetime.date.today().isoformat())\n\n    # collections Counter frequency\n    print(\"Counter top:       \", Counter([\"a\", \"b\", \"a\"]).most_common(1))\n\n    # collections namedtuple\n    Point = namedtuple(\"Point\", [\"x\", \"y\"])\n    p = Point(5, 10)\n    print(f\"Point: x={p.x}, y={p.y}\")\n\n    # itertools combinations\n    print(\"Combinations:      \", list(itertools.combinations([1, 2, 3], 2)))\n"
+    },
+    {
+      "topic": "Custom Modules And Packages",
+      "source_file": "02_custom_modules_and_packages.py",
+      "key_notes": [
+        "Utility helper class for custom module demonstration"
+      ],
+      "example_code": "\n    print(\"Slugified:\", TextUtils.slugify(\"Clean Code Architecture 2026\"))\n"
+    },
+    {
+      "topic": "Package Managers",
+      "source_file": "03_package_managers.py",
+      "key_notes": [
+        "Package managers lookup dictionary"
+      ],
+      "example_code": "\n    for tool, desc in MANAGERS.items():\n        print(f\"{tool:8}: {desc}\")\n"
+    },
+    {
+      "topic": "Project Configuration Pyproject",
+      "source_file": "04_project_configuration_pyproject.py",
+      "key_notes": [
+        "pyproject.toml sample template"
+      ],
+      "example_code": "\n    print(TOML_CONFIG.strip())\n"
+    },
+    {
+      "topic": "Virtual Environments",
+      "source_file": "05_virtual_environments.py",
+      "key_notes": [
+        "Display current virtualenv executable and version"
+      ],
+      "example_code": "\n    # Display current virtualenv executable and version\n    print(\"Python Executable:\", sys.executable)\n    print(\"Python Version:   \", sys.version.split()[0])\n"
+    },
+    {
+      "topic": "Common Packages",
+      "source_file": "06_common_packages.py",
+      "key_notes": [
+        "Check installed status of popular third-party libraries"
+      ],
+      "example_code": "\n    for pkg in [\"requests\", \"numpy\", \"pandas\", \"json\", \"math\"]:\n        print(f\"Package {pkg:10}: {'Installed' if check_package(pkg) else 'Not installed'}\")\n"
+    }
+  ]
+}

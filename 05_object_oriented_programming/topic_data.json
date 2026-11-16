@@ -1,0 +1,64 @@
+{
+  "curriculum_folder": "05_object_oriented_programming",
+  "description": "Topic index with source-derived notes and representative runnable examples.",
+  "topic_count": 6,
+  "topics": [
+    {
+      "topic": "Classes And Objects",
+      "source_file": "01_classes_and_objects.py",
+      "key_notes": [
+        "Class definition with instance attributes",
+        "Instance method"
+      ],
+      "example_code": "\n    user = User(\"alex\", \"alex@example.com\")\n    print(user.get_details())\n"
+    },
+    {
+      "topic": "Methods Instance Class Static",
+      "source_file": "02_methods_instance_class_static.py",
+      "key_notes": [
+        "Instance method",
+        "Class method factory constructor",
+        "Static method utility"
+      ],
+      "example_code": "\n    item = Item.from_csv(\"Keyboard, 100\")\n    print(f\"{item.name} Total: ${item.calculate_total():.2f}\")\n    print(\"Valid?:\", Item.is_valid_price(item.price))\n"
+    },
+    {
+      "topic": "Encapsulation And Properties",
+      "source_file": "03_encapsulation_and_properties.py",
+      "key_notes": [
+        "Getter property",
+        "Setter property with validation"
+      ],
+      "example_code": "\n    w = Wallet(100.0)\n    w.balance = 150.0\n    print(\"Wallet balance:\", w.balance)\n"
+    },
+    {
+      "topic": "Inheritance And Mro",
+      "source_file": "04_inheritance_and_mro.py",
+      "key_notes": [
+        "Base class",
+        "Subclass with super() call"
+      ],
+      "example_code": "\n    dog = Dog()\n    print(\"Dog sound:\", dog.speak())\n    print(\"Dog MRO:   \", [cls.__name__ for cls in Dog.mro()])\n"
+    },
+    {
+      "topic": "Abstract Base Classes",
+      "source_file": "05_abstract_base_classes.py",
+      "key_notes": [
+        "Abstract base class enforcing interface",
+        "Concrete implementation"
+      ],
+      "example_code": "\n    rect = Rectangle(4, 5)\n    print(\"Rectangle area:\", rect.area())\n"
+    },
+    {
+      "topic": "Magic Dunder Methods",
+      "source_file": "06_magic_dunder_methods.py",
+      "key_notes": [
+        "Point with operator overloading and string representation",
+        "User friendly string",
+        "Overload + operator",
+        "Overload == operator"
+      ],
+      "example_code": "\n    p1 = Point(1, 2)\n    p2 = Point(3, 4)\n    print(\"p1 + p2 =\", p1 + p2)\n    print(\"p1 == Point(1, 2):\", p1 == Point(1, 2))\n"
+    }
+  ]
+}

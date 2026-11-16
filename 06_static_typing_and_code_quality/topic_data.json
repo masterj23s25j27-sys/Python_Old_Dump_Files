@@ -1,0 +1,48 @@
+{
+  "curriculum_folder": "06_static_typing_and_code_quality",
+  "description": "Topic index with source-derived notes and representative runnable examples.",
+  "topic_count": 5,
+  "topics": [
+    {
+      "topic": "Typing System",
+      "source_file": "01_typing_system.py",
+      "key_notes": [
+        "Generic container class",
+        "Function with literal constraint and callable type"
+      ],
+      "example_code": "\n    c = Container[int](42)\n    print(\"Container item:\", c.get())\n    print(run_action(\"start\", lambda: \"Service initialized\"))\n"
+    },
+    {
+      "topic": "Pydantic Validation",
+      "source_file": "02_pydantic_validation.py",
+      "key_notes": [
+        "Pydantic data validation model"
+      ],
+      "example_code": "\n        u = UserSchema(id=1, username=\"john_doe\", age=25)\n        print(\"Validated JSON:\", u.model_dump_json())\n\nexcept ImportError:\n    from dataclasses import dataclass, asdict\n\n    @dataclass\n    class UserSchema:\n        id: int\n        username: str\n        age: int\n\n    if __name__ == \"__main__\":\n        u = UserSchema(1, \"john_doe\", 25)\n        print(\"Fallback dataclass:\", asdict(u))\n"
+    },
+    {
+      "topic": "Type Checkers Overview",
+      "source_file": "03_type_checkers_overview.py",
+      "key_notes": [
+        "Review the type checkers overview example and identify its inputs, outputs, and edge cases."
+      ],
+      "example_code": "\n    for name, cmd in CHECKERS.items():\n        print(f\"{name:8}: {cmd}\")\n"
+    },
+    {
+      "topic": "Formatters And Linters",
+      "source_file": "04_formatters_and_linters.py",
+      "key_notes": [
+        "Review the formatters and linters example and identify its inputs, outputs, and edge cases."
+      ],
+      "example_code": "\n    for tool, desc in TOOLS.items():\n        print(f\"{tool:8}: {desc}\")\n"
+    },
+    {
+      "topic": "Documentation Sphinx",
+      "source_file": "05_documentation_sphinx.py",
+      "key_notes": [
+        "Function with Google-style docstrings"
+      ],
+      "example_code": "\n    print(\"Interest:\", calculate_interest(1000, 0.05, 3))\n"
+    }
+  ]
+}
